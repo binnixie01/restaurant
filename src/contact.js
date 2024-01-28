@@ -1,10 +1,7 @@
-const Contact=()=>{
 
-}
 
-const contactLoad=()=>{
-    const swap = document.getElementById('swap')
-    swap.innerText=""
+const contactLoad=(content)=>{
+    content.innerText="this is contact"
 
 }
 
