@@ -2,6 +2,7 @@ import contactLoad from "./contact";
 import aboutLoad from "./about";
 import homeLoad from "./home";
 import menuLoad from "./menu"
+import "./style.css"
 
 // header and nav
 const header = document.querySelector("header")
@@ -22,18 +23,27 @@ nav.appendChild(about)
 
 const content = document.getElementById("content")
 contact.addEventListener('click', (e) => {
+    setActive(e.target)
     contactLoad(content)
 })
 about.addEventListener('click', (e) => {
+    setActive(e.target)
     aboutLoad(content)
+    
 })
 home.addEventListener('click', (e) => {
+    setActive(e.target)
     homeLoad(content)
 })
 menu.addEventListener('click', (e) => {
+    setActive(e.target)
     menuLoad(content)
 })
 const buttons = document.querySelectorAll("nav button")
-// buttons.forEach(button=>{})
+const setActive=(button)=>{
+    buttons.forEach(but=>but.classList.remove("active"))
+    button.classList.add("active")
+
+}
 
 homeLoad(content)
