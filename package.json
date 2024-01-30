@@ -4,7 +4,8 @@
   "description": "restaurant site using webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "show": "git subtree push --prefix dist origin gh-pages" 
   },
   "repository": {
     "type": "git",
